@@ -1,5 +1,7 @@
 import {Template} from 'meteor/templating';
 
+import Items from '../api/items.js';
+
 import "./body.html";
 
 //Template is for using the Template function. body is referring to body.html. Helpers accepts an object
@@ -7,7 +9,11 @@ import "./body.html";
 //Each of its properties can be referenced for placing their key on the page.
 //When using 'helpers', you can just use {{hello}} instead of {{>hello}} 
 Template.body.helpers({     
-	hello: "Helllooooo!"
+	hello: "Helllooooo!",
+
+	items() {
+		return Items.find({});
+	}
 });
 
 

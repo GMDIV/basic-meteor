@@ -4,6 +4,12 @@
 	</header>
 	<main>
 		<h2>{{hello}}</h2>
+	<!-- 	//With {{#each items}}, we are creating a tag which will loop through all of the items in the variable
+			//(In this case, a database) and specifically target the named property ( {{text}} ).
+ -->		
+ 		<div>{{#each items}}
+			{{text}}
+		{{/each}}</div>
 		<button class="test">Click here!</button>
 	</main>
 
